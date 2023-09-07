@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/outputTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/backdrop_spiderman"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="2:1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="?android:attr/textColorPrimaryInverse"
+            tools:ignore="ContentDescription" />
+
+        <include layout="@layout/organism_card_desc"
+            android:id="@+id/organismCard"/>
+
+        <include layout="@layout/sample_terbang"
+            android:id="@+id/sampleTerbang"/>
+
+        <include layout="@layout/sample_terbang_bayangan"
+            android:id="@+id/sampleTerbangBayangan"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
